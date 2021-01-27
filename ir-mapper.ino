@@ -49,5 +49,5 @@ void loop(){
           irrecv.enableIRIn();
       }
       irrecv.resume();
-  }
+    }
 }
