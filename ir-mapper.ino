@@ -40,13 +40,13 @@ void loop(){
           irrecv.enableIRIn();
       }
       if(results.value == 0x10011) { // Philips TV Volume DOWN command
-        //Logitech Z906 volume DOWN command
-        unsigned int irSignal[] = { 9024,4404,604,482,600,1590,608,478,604,478,605,478,604,482,601,481,605,478,604,478,605,482,600,482,605,477,605,477,605,1589,605,482,604,1590,608,480,603,1589,605,482,600,1590,609,478,604,1590,610,1583,605,482,604,1590,605,477,605,1590,604,478,605,1589,609,478,605,477,605,1580,609 };
-        for (int i = 0; i < 3; i++) {
-            irsend.sendRaw(irSignal, sizeof(irSignal) / sizeof(irSignal[0]), 38);
-            delay(50);
-        }
-        irrecv.enableIRIn();
+          //Logitech Z906 volume DOWN command
+          unsigned int irSignal[] = { 9024,4404,604,482,600,1590,608,478,604,478,605,478,604,482,601,481,605,478,604,478,605,482,600,482,605,477,605,477,605,1589,605,482,604,1590,608,480,603,1589,605,482,600,1590,609,478,604,1590,610,1583,605,482,604,1590,605,477,605,1590,604,478,605,1589,609,478,605,477,605,1580,609 };
+          for (int i = 0; i < 3; i++) {
+              irsend.sendRaw(irSignal, sizeof(irSignal) / sizeof(irSignal[0]), 38);
+              delay(50);
+          }
+          irrecv.enableIRIn();
       }
       irrecv.resume();
   }
