@@ -27,7 +27,7 @@ void loop(){
           //Logitech Z906 Power ON-OFF command
           unsigned int irSignal[] = { 9027,4401,609,473,609,1585,609,478,605,477,609,474,608,478,604,478,605,478,609,473,609,478,604,478,604,478,609,473,609,1589,605,477,609,1589,605,477,609,474,608,478,605,477,609,473,609,478,604,478,609,1584,609,1585,608,1589,605,1589,609,1584,609,1589,605,1589,608,1585,609,469,608 };
           irsend.sendRaw(irSignal, sizeof(irSignal) / sizeof(irSignal[0]), 38);
-          delay(100);
+          delay(50);
           irrecv.enableIRIn();
       }
       if(results.value == 0x10010) { // Philips TV Volume UP command
