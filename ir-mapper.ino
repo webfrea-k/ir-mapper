@@ -23,9 +23,10 @@ void setup(){
 
 void loop(){
     if (irrecv.decode(&results)){
-        if (results.value == 0x1000C || results.value == 0xC) { // Philips TV Powe ON-OFF command
+        if (results.value == 12 || results.value == 65548) { // Philips TV Power ON-OFF command
             //Logitech Z906 Power ON-OFF command
             unsigned int irSignal[] = { 9027,4401,609,473,609,1585,609,478,605,477,609,474,608,478,604,478,605,478,609,473,609,478,604,478,604,478,609,473,609,1589,605,477,609,1589,605,477,609,474,608,478,605,477,609,473,609,478,604,478,609,1584,609,1585,608,1589,605,1589,609,1584,609,1589,605,1589,608,1585,609,469,608 };
+            delay(500);
             irsend.sendRaw(irSignal, sizeof(irSignal) / sizeof(irSignal[0]), 38);
             delay(50);
             irrecv.enableIRIn();
