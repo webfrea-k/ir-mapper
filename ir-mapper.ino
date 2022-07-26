@@ -1,4 +1,4 @@
-#include <IRremote.h>
+#include <IRremote.h> #3.x
 #if defined(__AVR_ATtiny25__) || defined(__AVR_ATtiny45__) || defined(__AVR_ATtiny85__) || defined(__AVR_ATtiny87__) || defined(__AVR_ATtiny167__)
 #include "ATtinySerialOut.h"
 #endif
